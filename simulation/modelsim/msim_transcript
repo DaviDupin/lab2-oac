@@ -1,0 +1,115 @@
+# Reading pref.tcl
+# do UNICICLO_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/davic/Documents/UnB/OAC/Lab2/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:25 on Nov 07,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/davic/Documents/UnB/OAC/Lab2/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture main of reg
+# End time: 00:15:25 on Nov 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/davic/Documents/UnB/OAC/Lab2/half_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:25 on Nov 07,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/davic/Documents/UnB/OAC/Lab2/half_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity half_adder
+# -- Compiling architecture main of half_adder
+# End time: 00:15:25 on Nov 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/davic/Documents/UnB/OAC/Lab2/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:25 on Nov 07,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/davic/Documents/UnB/OAC/Lab2/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture main of full_adder
+# -- Loading entity half_adder
+# End time: 00:15:26 on Nov 07,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/davic/Documents/UnB/OAC/Lab2/adder32b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:26 on Nov 07,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/davic/Documents/UnB/OAC/Lab2/adder32b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder32b
+# -- Compiling architecture main of adder32b
+# -- Loading entity full_adder
+# End time: 00:15:26 on Nov 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/davic/Documents/UnB/OAC/Lab2/processador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:26 on Nov 07,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/davic/Documents/UnB/OAC/Lab2/processador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity processador
+# -- Compiling architecture PC of processador
+# -- Loading entity reg
+# -- Loading entity adder32b
+# End time: 00:15:26 on Nov 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/davic/Documents/UnB/OAC/Lab2/processador_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:26 on Nov 07,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/davic/Documents/UnB/OAC/Lab2/processador_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity processador_tb
+# -- Compiling architecture sim of processador_tb
+# -- Loading entity processador
+# ** Warning: C:/Users/davic/Documents/UnB/OAC/Lab2/processador_tb.vhd(26): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 00:15:26 on Nov 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  processador_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" processador_tb 
+# Start time: 00:15:26 on Nov 07,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.processador_tb(sim)
+# Loading work.processador(pc)
+# Loading work.reg(main)
+# Loading work.adder32b(main)
+# Loading work.full_adder(main)
+# Loading work.half_adder(main)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: davic  Hostname: DESKTOP-5TFP6T4  ProcessID: 2764
+#           Attempting to use alternate WLF file "./wlft5yce7d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5yce7d
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 5 us
+# End time: 00:17:01 on Nov 07,2020, Elapsed time: 0:01:35
+# Errors: 0, Warnings: 2

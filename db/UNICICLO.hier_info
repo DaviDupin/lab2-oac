@@ -1,0 +1,1133 @@
+|processador
+clk => reg:PC.clk
+rst => reg:PC.rst
+PC_IN[0] => reg:PC.d[0]
+PC_IN[1] => reg:PC.d[1]
+PC_IN[2] => reg:PC.d[2]
+PC_IN[3] => reg:PC.d[3]
+PC_IN[4] => reg:PC.d[4]
+PC_IN[5] => reg:PC.d[5]
+PC_IN[6] => reg:PC.d[6]
+PC_IN[7] => reg:PC.d[7]
+PC_IN[8] => reg:PC.d[8]
+PC_IN[9] => reg:PC.d[9]
+PC_IN[10] => reg:PC.d[10]
+PC_IN[11] => reg:PC.d[11]
+PC_IN[12] => reg:PC.d[12]
+PC_IN[13] => reg:PC.d[13]
+PC_IN[14] => reg:PC.d[14]
+PC_IN[15] => reg:PC.d[15]
+PC_IN[16] => reg:PC.d[16]
+PC_IN[17] => reg:PC.d[17]
+PC_IN[18] => reg:PC.d[18]
+PC_IN[19] => reg:PC.d[19]
+PC_IN[20] => reg:PC.d[20]
+PC_IN[21] => reg:PC.d[21]
+PC_IN[22] => reg:PC.d[22]
+PC_IN[23] => reg:PC.d[23]
+PC_IN[24] => reg:PC.d[24]
+PC_IN[25] => reg:PC.d[25]
+PC_IN[26] => reg:PC.d[26]
+PC_IN[27] => reg:PC.d[27]
+PC_IN[28] => reg:PC.d[28]
+PC_IN[29] => reg:PC.d[29]
+PC_IN[30] => reg:PC.d[30]
+PC_IN[31] => reg:PC.d[31]
+PC_OUT[0] << adder32b:ADD.SUM[0]
+PC_OUT[1] << adder32b:ADD.SUM[1]
+PC_OUT[2] << adder32b:ADD.SUM[2]
+PC_OUT[3] << adder32b:ADD.SUM[3]
+PC_OUT[4] << adder32b:ADD.SUM[4]
+PC_OUT[5] << adder32b:ADD.SUM[5]
+PC_OUT[6] << adder32b:ADD.SUM[6]
+PC_OUT[7] << adder32b:ADD.SUM[7]
+PC_OUT[8] << adder32b:ADD.SUM[8]
+PC_OUT[9] << adder32b:ADD.SUM[9]
+PC_OUT[10] << adder32b:ADD.SUM[10]
+PC_OUT[11] << adder32b:ADD.SUM[11]
+PC_OUT[12] << adder32b:ADD.SUM[12]
+PC_OUT[13] << adder32b:ADD.SUM[13]
+PC_OUT[14] << adder32b:ADD.SUM[14]
+PC_OUT[15] << adder32b:ADD.SUM[15]
+PC_OUT[16] << adder32b:ADD.SUM[16]
+PC_OUT[17] << adder32b:ADD.SUM[17]
+PC_OUT[18] << adder32b:ADD.SUM[18]
+PC_OUT[19] << adder32b:ADD.SUM[19]
+PC_OUT[20] << adder32b:ADD.SUM[20]
+PC_OUT[21] << adder32b:ADD.SUM[21]
+PC_OUT[22] << adder32b:ADD.SUM[22]
+PC_OUT[23] << adder32b:ADD.SUM[23]
+PC_OUT[24] << adder32b:ADD.SUM[24]
+PC_OUT[25] << adder32b:ADD.SUM[25]
+PC_OUT[26] << adder32b:ADD.SUM[26]
+PC_OUT[27] << adder32b:ADD.SUM[27]
+PC_OUT[28] << adder32b:ADD.SUM[28]
+PC_OUT[29] << adder32b:ADD.SUM[29]
+PC_OUT[30] << adder32b:ADD.SUM[30]
+PC_OUT[31] << adder32b:ADD.SUM[31]
+
+
+|processador|reg:PC
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+clk => q[10]~reg0.CLK
+clk => q[11]~reg0.CLK
+clk => q[12]~reg0.CLK
+clk => q[13]~reg0.CLK
+clk => q[14]~reg0.CLK
+clk => q[15]~reg0.CLK
+clk => q[16]~reg0.CLK
+clk => q[17]~reg0.CLK
+clk => q[18]~reg0.CLK
+clk => q[19]~reg0.CLK
+clk => q[20]~reg0.CLK
+clk => q[21]~reg0.CLK
+clk => q[22]~reg0.CLK
+clk => q[23]~reg0.CLK
+clk => q[24]~reg0.CLK
+clk => q[25]~reg0.CLK
+clk => q[26]~reg0.CLK
+clk => q[27]~reg0.CLK
+clk => q[28]~reg0.CLK
+clk => q[29]~reg0.CLK
+clk => q[30]~reg0.CLK
+clk => q[31]~reg0.CLK
+rst => q[0]~reg0.ACLR
+rst => q[1]~reg0.ACLR
+rst => q[2]~reg0.ACLR
+rst => q[3]~reg0.ACLR
+rst => q[4]~reg0.ACLR
+rst => q[5]~reg0.ACLR
+rst => q[6]~reg0.ACLR
+rst => q[7]~reg0.ACLR
+rst => q[8]~reg0.ACLR
+rst => q[9]~reg0.ACLR
+rst => q[10]~reg0.ACLR
+rst => q[11]~reg0.ACLR
+rst => q[12]~reg0.ACLR
+rst => q[13]~reg0.ACLR
+rst => q[14]~reg0.ACLR
+rst => q[15]~reg0.ACLR
+rst => q[16]~reg0.ACLR
+rst => q[17]~reg0.ACLR
+rst => q[18]~reg0.ACLR
+rst => q[19]~reg0.ACLR
+rst => q[20]~reg0.ACLR
+rst => q[21]~reg0.ACLR
+rst => q[22]~reg0.ACLR
+rst => q[23]~reg0.ACLR
+rst => q[24]~reg0.ACLR
+rst => q[25]~reg0.ACLR
+rst => q[26]~reg0.ACLR
+rst => q[27]~reg0.ACLR
+rst => q[28]~reg0.ACLR
+rst => q[29]~reg0.ACLR
+rst => q[30]~reg0.ACLR
+rst => q[31]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+d[8] => q[8]~reg0.DATAIN
+d[9] => q[9]~reg0.DATAIN
+d[10] => q[10]~reg0.DATAIN
+d[11] => q[11]~reg0.DATAIN
+d[12] => q[12]~reg0.DATAIN
+d[13] => q[13]~reg0.DATAIN
+d[14] => q[14]~reg0.DATAIN
+d[15] => q[15]~reg0.DATAIN
+d[16] => q[16]~reg0.DATAIN
+d[17] => q[17]~reg0.DATAIN
+d[18] => q[18]~reg0.DATAIN
+d[19] => q[19]~reg0.DATAIN
+d[20] => q[20]~reg0.DATAIN
+d[21] => q[21]~reg0.DATAIN
+d[22] => q[22]~reg0.DATAIN
+d[23] => q[23]~reg0.DATAIN
+d[24] => q[24]~reg0.DATAIN
+d[25] => q[25]~reg0.DATAIN
+d[26] => q[26]~reg0.DATAIN
+d[27] => q[27]~reg0.DATAIN
+d[28] => q[28]~reg0.DATAIN
+d[29] => q[29]~reg0.DATAIN
+d[30] => q[30]~reg0.DATAIN
+d[31] => q[31]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= q[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= q[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[18] <= q[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[19] <= q[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[20] <= q[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[21] <= q[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[22] <= q[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[23] <= q[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[24] <= q[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[25] <= q[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[26] <= q[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[27] <= q[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[28] <= q[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[29] <= q[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD
+A[0] => full_adder:L1:0:FA.A
+A[1] => full_adder:L1:1:FA.A
+A[2] => full_adder:L1:2:FA.A
+A[3] => full_adder:L1:3:FA.A
+A[4] => full_adder:L1:4:FA.A
+A[5] => full_adder:L1:5:FA.A
+A[6] => full_adder:L1:6:FA.A
+A[7] => full_adder:L1:7:FA.A
+A[8] => full_adder:L1:8:FA.A
+A[9] => full_adder:L1:9:FA.A
+A[10] => full_adder:L1:10:FA.A
+A[11] => full_adder:L1:11:FA.A
+A[12] => full_adder:L1:12:FA.A
+A[13] => full_adder:L1:13:FA.A
+A[14] => full_adder:L1:14:FA.A
+A[15] => full_adder:L1:15:FA.A
+A[16] => full_adder:L1:16:FA.A
+A[17] => full_adder:L1:17:FA.A
+A[18] => full_adder:L1:18:FA.A
+A[19] => full_adder:L1:19:FA.A
+A[20] => full_adder:L1:20:FA.A
+A[21] => full_adder:L1:21:FA.A
+A[22] => full_adder:L1:22:FA.A
+A[23] => full_adder:L1:23:FA.A
+A[24] => full_adder:L1:24:FA.A
+A[25] => full_adder:L1:25:FA.A
+A[26] => full_adder:L1:26:FA.A
+A[27] => full_adder:L1:27:FA.A
+A[28] => full_adder:L1:28:FA.A
+A[29] => full_adder:L1:29:FA.A
+A[30] => full_adder:L1:30:FA.A
+A[31] => full_adder:L1:31:FA.A
+B[0] => full_adder:L1:0:FA.B
+B[1] => full_adder:L1:1:FA.B
+B[2] => full_adder:L1:2:FA.B
+B[3] => full_adder:L1:3:FA.B
+B[4] => full_adder:L1:4:FA.B
+B[5] => full_adder:L1:5:FA.B
+B[6] => full_adder:L1:6:FA.B
+B[7] => full_adder:L1:7:FA.B
+B[8] => full_adder:L1:8:FA.B
+B[9] => full_adder:L1:9:FA.B
+B[10] => full_adder:L1:10:FA.B
+B[11] => full_adder:L1:11:FA.B
+B[12] => full_adder:L1:12:FA.B
+B[13] => full_adder:L1:13:FA.B
+B[14] => full_adder:L1:14:FA.B
+B[15] => full_adder:L1:15:FA.B
+B[16] => full_adder:L1:16:FA.B
+B[17] => full_adder:L1:17:FA.B
+B[18] => full_adder:L1:18:FA.B
+B[19] => full_adder:L1:19:FA.B
+B[20] => full_adder:L1:20:FA.B
+B[21] => full_adder:L1:21:FA.B
+B[22] => full_adder:L1:22:FA.B
+B[23] => full_adder:L1:23:FA.B
+B[24] => full_adder:L1:24:FA.B
+B[25] => full_adder:L1:25:FA.B
+B[26] => full_adder:L1:26:FA.B
+B[27] => full_adder:L1:27:FA.B
+B[28] => full_adder:L1:28:FA.B
+B[29] => full_adder:L1:29:FA.B
+B[30] => full_adder:L1:30:FA.B
+B[31] => full_adder:L1:31:FA.B
+CARRY_IN => full_adder:L1:0:FA.CARRY_IN
+SUM[0] <= full_adder:L1:0:FA.SUM
+SUM[1] <= full_adder:L1:1:FA.SUM
+SUM[2] <= full_adder:L1:2:FA.SUM
+SUM[3] <= full_adder:L1:3:FA.SUM
+SUM[4] <= full_adder:L1:4:FA.SUM
+SUM[5] <= full_adder:L1:5:FA.SUM
+SUM[6] <= full_adder:L1:6:FA.SUM
+SUM[7] <= full_adder:L1:7:FA.SUM
+SUM[8] <= full_adder:L1:8:FA.SUM
+SUM[9] <= full_adder:L1:9:FA.SUM
+SUM[10] <= full_adder:L1:10:FA.SUM
+SUM[11] <= full_adder:L1:11:FA.SUM
+SUM[12] <= full_adder:L1:12:FA.SUM
+SUM[13] <= full_adder:L1:13:FA.SUM
+SUM[14] <= full_adder:L1:14:FA.SUM
+SUM[15] <= full_adder:L1:15:FA.SUM
+SUM[16] <= full_adder:L1:16:FA.SUM
+SUM[17] <= full_adder:L1:17:FA.SUM
+SUM[18] <= full_adder:L1:18:FA.SUM
+SUM[19] <= full_adder:L1:19:FA.SUM
+SUM[20] <= full_adder:L1:20:FA.SUM
+SUM[21] <= full_adder:L1:21:FA.SUM
+SUM[22] <= full_adder:L1:22:FA.SUM
+SUM[23] <= full_adder:L1:23:FA.SUM
+SUM[24] <= full_adder:L1:24:FA.SUM
+SUM[25] <= full_adder:L1:25:FA.SUM
+SUM[26] <= full_adder:L1:26:FA.SUM
+SUM[27] <= full_adder:L1:27:FA.SUM
+SUM[28] <= full_adder:L1:28:FA.SUM
+SUM[29] <= full_adder:L1:29:FA.SUM
+SUM[30] <= full_adder:L1:30:FA.SUM
+SUM[31] <= full_adder:L1:31:FA.SUM
+CARRY_OUT <= full_adder:L1:31:FA.CARRY
+
+
+|processador|adder32b:ADD|full_adder:\L1:0:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:0:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:0:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:1:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:1:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:1:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:2:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:2:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:2:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:3:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:3:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:3:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:4:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:4:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:4:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:5:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:5:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:5:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:6:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:6:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:6:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:7:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:7:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:7:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:8:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:8:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:8:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:9:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:9:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:9:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:10:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:10:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:10:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:11:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:11:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:11:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:12:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:12:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:12:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:13:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:13:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:13:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:14:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:14:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:14:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:15:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:15:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:15:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:16:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:16:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:16:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:17:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:17:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:17:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:18:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:18:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:18:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:19:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:19:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:19:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:20:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:20:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:20:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:21:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:21:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:21:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:22:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:22:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:22:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:23:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:23:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:23:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:24:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:24:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:24:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:25:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:25:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:25:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:26:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:26:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:26:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:27:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:27:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:27:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:28:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:28:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:28:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:29:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:29:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:29:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:30:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:30:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:30:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:31:FA
+A => half_adder:ha1.A
+B => half_adder:ha1.B
+CARRY_IN => half_adder:ha2.B
+SUM <= half_adder:ha2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:31:FA|half_adder:ha1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processador|adder32b:ADD|full_adder:\L1:31:FA|half_adder:ha2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
